@@ -1,0 +1,176 @@
+@charset "utf-8";
+*{padding: 0px; margin:0px;}
+body{/*background-color: cornsilk;*/
+    background-image: url(../img/bg2.jpg);}
+/*.con{margin: 0 auto;}*/
+.cat{ width:500px; height:500px;/*border:1px solid saddlebrown;*/
+	   position:relative;
+	   top:220px;left:500px;
+	   -webkit-transform-style:preserve-3d;
+	    perspective:600px;
+      -webkit-animation:catmove 3s linear 0.1s infinite;}
+.cat .head{width:230px;height:200px;border-radius: 230px;
+           position: relative;
+           border:3px solid lightsteelblue;
+           background: #07bbee;
+	       background: -webkit-radial-gradient(
+	         right top,#fff 10%,#07bbee 20%,#10a6ce 75%,#000);
+	       box-shadow:-5px 10px 15px rgba(0,0,0,0.45);
+}
+.cat .head .face{
+           	width:180px; height:140px;border-radius: 100px;
+           	/*border:2px solid black;*/
+           	background-color: white;
+           	position: relative;
+           	top:46px;
+           	left:25px;
+           	z-index: 2;
+           	background: -webkit-radial-gradient(
+           	right top,#fff 75%,#eee 80%,#999 90%,#444);  	
+           }
+.cat .head .face .eyes{ position: relative;z-index: 3;}
+.cat .head .face .eyes .eye{width:50px;height:60px;border:2px solid black;
+                          float: left;
+                          border-radius:25px;
+                          background-color: white;
+                          position:absolute;
+                          top:-20px;
+                          }
+.cat .head .face .eyes .left{ left:35px;}
+.cat .head .face .eyes .right{ left:88px;}
+.cat .head .face .eyes .eye .eye_spot{width:10px;height:10px;border:1px solid black;
+                                      background-color: black;border-radius: 5px;
+                                      position:absolute;
+                                      top:30px;
+                                      -webkit-animation:eyemove 2s linear infinite;}
+.cat .head .face .eyes .eye .left{left:30px;}                             
+.cat .head .face .eyes .eye .right{left:8px;}
+.cat .head .face .nose{ position:absolute;
+                        z-index: 3;
+                        width:20px;height:20px;
+                        border-radius: 20px;
+                        border:2px solid #000000;
+                        background-color:#c93300;
+                        left:76px;top:32px;
+                        }
+.cat .head .face .nose .red_nose{width:7px;height:7px;border-radius: 5px;
+                                 box-shadow:9px 7px 4px white;
+                                 position: absolute;}
+.cat .head .face .nose .nose_length{width:3px;height:70px;background-color: #000000;
+                                    position: absolute;top:20px;left:10px;}
+.cat .head .face .mouth{width:100px;height:100px;
+                        border-color: #333;
+                        border-left: solid 3px;
+                        border-bottom: 3px solid;
+                        border-radius: 0px 100px 0px 100px;
+                        transform: rotate(-45deg);
+                        position: absolute;
+                        left:40px;top:45px;
+                        z-index: 3;
+                        }
+.cat .head .face .beard_left{width:50px;height:2px;background-color: #000000;
+                             position: absolute;
+                             top:70px;left:10px;}
+                 .beard_left:before,.beard_left:after{content: "";
+                                    width:50px;height:2px;
+                                    background: black;
+                                    position: absolute;
+                                    }
+                                    .beard_left:before{top:-13px;transform:rotate(15deg);}
+                                    .beard_left:after{top:13px; transform:rotate(-15deg);}                     
+.cat .head .face .beard_right{width:50px;height:2px;background-color: #000000;
+                             position: absolute;
+                             top:70px;left:120px;}
+                 .beard_right:before,.beard_right:after{content: "";
+                                    width:50px;height:2px;
+                                    background: black;
+                                    position: absolute;
+                                    }
+                                    .beard_right:before{top:-6px;
+                                    -webkit-transform-origin: 0 100%;
+                                    transform: rotate(-15deg);}
+                                    .beard_right:after{top:6px;
+                                     -webkit-transform-origin: 0 0;
+                                     transform: rotate(15deg);}
+
+.cat .bodys{width:176px;height:150px;background-color: #07bbee;
+            border:2px solid lightsteelblue;
+            position:relative;
+            left:30px;top:-10px;}
+.cat .bodys .neck{width:182px;height:20px;border-radius: 12px;background-color: #c93300;
+                  border:2px solid #333333;
+                  background: -webkit-gradient(linear,left top,left bottom,from(#c40),to(#800400));
+                  position:absolute;left:-5px;top:-8px;z-index: 3;}
+.cat .bodys .neck.bell{}
+.cat .bodys .belly{width:120px;height:120px;border-radius: 100px;/*border:2px solid #333333;*/
+                   position:absolute;top:-6px;left:24px;background-color: white;z-index: 2;}
+.cat .bodys .belly .pocket{width:90px;border:2px solid #333;
+                           border-radius:90px 90px 0 0;height:45px;
+                           transform: rotate(180deg);
+                           position: absolute;
+                           top:55px;left:14px;
+                           z-index: 3;}
+.cat .bodys .bottom_center{position:absolute;width:20px;height:23px;border-radius:20px 20px 0 0;
+                          border:#333333;border-top:2px solid;border-left:2px solid;border-right:2px solid;
+                          top:128px;left:74px;
+                          background-color:white;}                           
+.cat .hand_left{position:relative;
+               -webkit-animation: handmove 2s linear 0.1s infinite;}  
+.cat .hand_left .arm_left{position:absolute;
+                          width:32px;height:70px;
+                          
+                          background-color: #07BBEE;
+                          left:3px;top:-158px;
+                          transform:rotate(45deg);
+                          z-index: 2;
+                          }                        
+.cat .hand_left .palm_left{position:absolute;z-index:3;
+						   width:45px;height:45px;
+                           border-radius:45px;
+                           border:2px solid #333333;
+                           background-color: white;
+                           left:-32px;top:-122px;}
+.cat .hand_right{position:relative;}  
+.cat .hand_right .arm_right{position:absolute;
+                          width:32px;height:70px;
+                          
+                          background-color: #07BBEE;
+                          left:188px;top:-135px;
+                          transform-origin: 0 0;
+                          transform: rotate(-45deg);
+                          z-index: 2;
+                          }                        
+.cat .hand_right .palm_right{position:absolute;z-index:3;
+						   width:45px;height:45px;
+                           border-radius:45px;
+                           border:2px solid #333333;
+                           background-color: white;
+                           left:220px;top:-126px;}
+.cat .foot{position:absolute;}
+.cat .foot .foot_left{position:relative;width:100px;height:20px;border:2px solid #333333;
+                      border-radius: 20px;background-color: white;
+                      top:-20px;left:12px;
+                      /*background:-webkit-gradient(linear,left top,left bottom,from(white),to(ghostwhite));*/
+                     background: -webkit-gradient(
+                     linear, right top, left bottom, from(#fff),color-stop(0.75,#fff),color-stop(0.85,#eee), to(#999));}
+.cat .foot .foot_right{position:relative;width:100px;height:20px;border:2px solid #333333;
+                      border-radius: 20px;background-color: white;
+                      top:-44px;left:120px;
+                      /*background:-webkit-gradient(linear,left top,left bottom,from(white),to(ghostwhite));*/
+                     background: -webkit-gradient(
+                     linear, right top, left bottom, from(#fff),color-stop(0.75,#fff),color-stop(0.85,#eee), to(#999));}
+@-webkit-keyframes eyemove{
+	0%{margin:5px 0 0 0;}
+	30%{margin:5px 5px 0 0;}
+	60%{margin:0px -5px 4px 0;}
+	90%{margin:8px 5px 5px 5px;}
+	} 
+/*@-webkit-keyframes catmove{
+	0%{margin-left:1000px;}
+	30%{transform: rotateY(360deg);}
+	50%{transform: rotateY(360deg);}
+	100%{margin-left:0px;}
+	
+}*/
+input{width:100px;height: 100px; border-radius: 50px;background-color:silver;
+ -webkit-appearance: none;position: relative;left:30px;top:-300px;}
